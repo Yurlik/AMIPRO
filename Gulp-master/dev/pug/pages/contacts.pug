@@ -7,6 +7,48 @@ block content
   .container
     .row
       .col-12
-        span.google wergwehg werg werg werg werg wsrgv werg werg
-        .hoo
-          +svg('down')
+        ul.breadcrumbs
+          li.breadcrumbs__crumb
+            a(href='#') Главная
+          li.breadcrumbs__delim
+            span /
+          li.breadcrumbs__crumb
+            span Контакты
+
+  .container
+    .row
+      .col-9
+        .map
+          #YMapsID(style='width: 100%; height: 360px;')
+
+      .col-3
+        +form_feedback()
+
+  .container
+    .row
+      .col-2
+        .logo
+          img(src='img/general/logo.png')
+      .col-6
+        .row.blockContacts
+          .col-6.blockContacts__blockAddress Наш адрес: Москва, метро Новослободская Весковский переулок д2, территория ТСЖ «Весковский»
+
+          .col-6.blockContacts__blockPhoneEmail
+            .blockContacts__blockPhoneEmail_blockPhone
+              a(href='tel:+89686690418') 8 (968) 669 0418
+              a(href='tel:+89686690419') 8 (968) 669 0419
+            .blockContacts__blockPhoneEmail_blockEmail
+              a(href='mailto:helpamiprosportpit@gmail.com') helpamiprosportpit@gmail.com
+        .row
+          .col-12
+            .orderAlert Для самовывоза требуется предварительный заказ на сайте или по телефону у менеджера!
+      .offset-1.col-3
+        .blockWorkTime
+          div Часы работы:
+          div Пн-Пт с 12:00 до 21:00
+          div Воскресенье выходной
+          div Суббота и праздничные дни уточняйте по телефону!
+          div Без перерывов
+    .row
+      .col-12
+        .innBlock ИП Лобанова Юлия Юрьевна ИНН771508499794/ОРГНИП312774626400677

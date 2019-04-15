@@ -52,3 +52,28 @@ mixin form_default(formClass,formId)
                 animate(attributename='opacity', values='1;0', dur='1s', begin='0s', repeatcount='indefinite')
 
     .form__police
+
+mixin form_feedback(formClass,formId)
+  - formClass = formClass || ''
+  - formId = formId || ''
+  form(class='form ' + formClass, id=''+formId, action='#', enctype='multipart/form-data')
+    // Hidden Required Fields
+    input(name='form_subject', value='' + formTitle, type='hidden')
+    // END Hidden Required Fields
+    .formTitle Обратная связь
+    .form__item
+      label(for="inp_1") Имя
+        span *
+      input(type='text', id="inp_1", required='', name='name', placeholder='')
+    .form__item
+      label(for="inp_2") Email
+        span *
+      input(type='email', id="inp_2", required='', name='mail', placeholder='')
+    .form__item
+      label(for="inp_3") Телефон
+      input(type='tel', id="inp_3", required='', name='phone', placeholder='')
+    .form__item.form__item--textarea
+      label(for="inp_4") Ваше сообщение
+      textarea(name="Textarea", id="inp_4", cols="30", rows="10")
+    .form__item.form__item--btn
+      button(type='submit').btn Отправить сообщение

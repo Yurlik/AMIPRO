@@ -51,10 +51,91 @@
 
 /* page style */
 
-.google
-  color: red
-  +lg-block()
-    color: green
+/* breadcrumbs */
+
+.breadcrumbs
+  display: flex
+  flex-direction: row
+  margin-bottom: 50px
+
+  .breadcrumbs__crumb
+    a, span
+      font-family: 'Montserrat', sans-serif
+      font-weight: 600
+      font-size: 12px
+
+  .breadcrumbs__delim
+    margin: 0 5px
+
+.formTitle
+  text-transform: uppercase
+  font-size: 19px
+  font-weight: bold
+  font-family: 'Montserrat', sans-serif
+  margin-bottom: 35px
+
+.form__item
+  position: relative
+  display: block
+  margin-bottom: 20px
+  label
+    position: absolute
+    top: 50%
+    left: 18px
+    font-size: 16px
+    font-weight: 400
+    line-height: 1
+    cursor: text
+    transform: translateY(-50%)
+    transition: $tr
+    color: #8e8e8e
+    font-family: 'Source Sans Pro', sans-serif
+  input,textarea
+    display: block
+    box-sizing: border-box
+    max-width: 360px
+    width: 100%
+    height: 40px
+    border: 1px solid #dfe5e8
+    border-radius: 3px
+    background-color: #f5f7f6
+    transition: $tr
+  textarea
+    height: 100px
+  button
+    background-color: #000
+    font-family: 'Montserrat', sans-serif
+    font-weight: bold
+    text-align: center
+    text-transform: uppercase
+    color: #fff
+    font-size: 14px
+    height: 40px
+    width: 100%
+
+.form__item--textarea
+  label
+    top: 19px
+
+.form__item--focus
+  label
+    top: -15px
+    left: 15px
+    color: #393939
+    font-size: 11px
+    transform: translateY(0)
+  textarea
+    padding-top: 15px
+    height: 165px
+
+
+.map
+  background-color: #f3f3f3
+  padding: 15px
+
+#YMapsID
+  width: 100%
+  height: 400px
 
 
 
@@ -93,9 +174,6 @@
 
 
 
-
-
- 
 
 
 

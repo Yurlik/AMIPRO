@@ -9,6 +9,40 @@ $(function() {
 
     //dynamicHeight($('.you_class'));
 
+    /*-----------*/
+
+    $(".form__item input, .form__item textarea").focus(function () {
+        $(this).parent().addClass("form__item--focus");
+    }).blur(function () {
+        if ($(this).val() === '') {
+            $(this).parent().removeClass("form__item--focus");
+        }
+    });
+
+    /**/
+
+    var myMap;
+    ymaps.ready(function () {
+        // Создание экземпляра карты и его привязка к контейнеру с
+        // заданным id ("map").
+        myMap = new ymaps.Map("YMapsID", {
+            // При инициализации карты обязательно нужно указать
+            // её центр и коэффициент масштабирования.
+            center: [56.342436, 43.941972],
+            // Масштаб
+            zoom: 17
+        });
+        //Маркер
+        var myPlacemark = new ymaps.Placemark([56.342436, 43.941972], {}, {
+            preset: 'islands#greenDotIcon'
+        });
+        myMap.geoObjects.add(myPlacemark); // Размещение геообъекта на карте.
+    });
+
+
+
+
+    /*-----------*/
 
     var $form = $('.form');
 
